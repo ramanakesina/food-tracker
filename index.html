@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Health Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">WELCOME RAMANA RAO KESINA & Gopi PANDI</h1>
+
+<div class="container">
+
+<h2>Food Log</h2>
+<input id="foodInput" placeholder="What did you eat?">
+<button onclick="addFood()">Add Food</button>
+<ul id="foodList"></ul>
+
+<h2>Water Intake</h2>
+<input id="waterInput" type="number" placeholder="Water (ml)">
+<button onclick="addWater()">Add Water</button>
+<ul id="waterList"></ul>
+
+<hr>
+
+<button onclick="openTest()">Daily Health Test</button>
+<button onclick="downloadExcel()">Download Excel</button>
+
+</div>
+
+<!-- Health Test Modal -->
+<div id="testModal" class="modal">
+<div class="modal-content">
+
+<button onclick="closeTest()">← Back</button>
+
+<h2>Daily Health Self Check</h2>
+
+<form id="healthForm">
+
+<div class="q">Gas Trouble:
+<label><input type="radio" name="gas" value="1">1</label>
+<label><input type="radio" name="gas" value="2">2</label>
+<label><input type="radio" name="gas" value="3">3</label>
+<label><input type="radio" name="gas" value="4">4</label>
+<label><input type="radio" name="gas" value="5">5</label>
+</div>
+
+<div class="q">Headache:
+<label><input type="radio" name="headache" value="1">1</label>
+<label><input type="radio" name="headache" value="2">2</label>
+<label><input type="radio" name="headache" value="3">3</label>
+<label><input type="radio" name="headache" value="4">4</label>
+<label><input type="radio" name="headache" value="5">5</label>
+</div>
+
+<div class="q">Body Pain:
+<label><input type="radio" name="body" value="1">1</label>
+<label><input type="radio" name="body" value="2">2</label>
+<label><input type="radio" name="body" value="3">3</label>
+<label><input type="radio" name="body" value="4">4</label>
+<label><input type="radio" name="body" value="5">5</label>
+</div>
+
+<div class="q">Energy Level:
+<label><input type="radio" name="energy" value="1">1</label>
+<label><input type="radio" name="energy" value="2">2</label>
+<label><input type="radio" name="energy" value="3">3</label>
+<label><input type="radio" name="energy" value="4">4</label>
+<label><input type="radio" name="energy" value="5">5</label>
+</div>
+
+<div class="q">Sleep Quality:
+<label><input type="radio" name="sleep" value="1">1</label>
+<label><input type="radio" name="sleep" value="2">2</label>
+<label><input type="radio" name="sleep" value="3">3</label>
+<label><input type="radio" name="sleep" value="4">4</label>
+<label><input type="radio" name="sleep" value="5">5</label>
+</div>
+
+<div class="q">Stress Level:
+<label><input type="radio" name="stress" value="1">1</label>
+<label><input type="radio" name="stress" value="2">2</label>
+<label><input type="radio" name="stress" value="3">3</label>
+<label><input type="radio" name="stress" value="4">4</label>
+<label><input type="radio" name="stress" value="5">5</label>
+</div>
+
+<textarea id="note" placeholder="Anything to say?"></textarea>
+
+<br><br>
+<button type="button" onclick="saveHealth()">Save</button>
+
+</form>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

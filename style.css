@@ -1,0 +1,79 @@
+html {
+scroll-behavior: smooth;
+}
+
+/* Animated graphic background */
+body {
+font-family: Arial;
+padding: 20px;
+background: linear-gradient(-45deg,#89f7fe,#66a6ff,#c2ffd8,#fbd786);
+background-size: 400% 400%;
+animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+0% {background-position:0% 50%;}
+50% {background-position:100% 50%;}
+100% {background-position:0% 50%;}
+}
+
+.title {
+text-align: center;
+margin-bottom: 20px;
+}
+
+.container {
+background: white;
+padding: 20px;
+border-radius: 12px;
+max-width: 700px;
+margin: auto;
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+input, textarea {
+padding: 8px;
+margin: 6px 0;
+width: 100%;
+border-radius: 6px;
+border: 1px solid #ccc;
+}
+
+button {
+padding: 8px 12px;
+border: none;
+border-radius: 6px;
+background: #007BFF;
+color: white;
+cursor: pointer;
+margin: 5px;
+}
+
+button:hover {
+background: #0056b3;
+}
+
+.modal {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.6);
+overflow-y: auto;
+}
+
+.modal-content {
+background: white;
+padding: 20px;
+margin: 40px auto;
+width: 60%;
+max-height: 85vh;
+overflow-y: auto;
+border-radius: 10px;
+}
+
+.q {
+margin: 10px 0;
+}
